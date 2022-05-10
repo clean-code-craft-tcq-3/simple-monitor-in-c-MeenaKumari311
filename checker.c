@@ -2,6 +2,7 @@
 #include <assert.h>
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
+  int retValue;
   printf("Checking temperature!\n");
   retValue=IsValueInRange(temperature,0,45);
   printf("Checking soc!\n");
