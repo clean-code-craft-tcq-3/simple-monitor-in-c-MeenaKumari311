@@ -22,15 +22,27 @@ int IsValueInRange(float value, float MinThreshold, float MaxThreshold)
   if(value < MinThreshold || value > MaxThreshold) {
     printf("Value out of range!\n");
     return 0;
- }
-  return 1;
+  }
+    else
+    {
+       printf("Value is OK, within range!\n");
+      return 1;
+    }
+ 
+  
 }
 
 int main() {
+  printf("************Test1*************!\n");
   assert(batteryIsOk(25, 70, 0.7));
+  printf("************Test2*************!\n");
   assert(!batteryIsOk(50, 85, 0));
+  printf("************Test3*************!\n");
   assert(!batteryIsOk(-10, 85, 0));
+  printf("************Test4*************!\n");
   assert(!batteryIsOk(25, 10, 0.5));
+  printf("************Test5*************!\n");
   assert(!batteryIsOk(25, 90, 0.5));
+  printf("************Test6*************!\n");
   assert(!batteryIsOk(25, 70, 0.9));
 }
