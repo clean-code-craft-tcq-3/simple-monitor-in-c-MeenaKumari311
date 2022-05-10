@@ -2,13 +2,18 @@
 #include <assert.h>
 int IsValueInRange(float value, float MinThreshold, float MaxThreshold);
 int batteryIsOk(float temperature, float soc, float chargeRate) {
-  int retValue;
+  int retValue=0;
   printf("Checking temperature!\n");
   retValue=IsValueInRange(temperature,0,45);
-  printf("Checking soc!\n");
+  if(retValue==1)
+  {printf("Checking soc!\n");
   retValue=IsValueInRange(soc,20,80);
+  }
+  if(retValue==1)
+  {
   printf("Checking chargeRate!\n");
   retValue=IsValueInRange(chargeRate,-1000,0.8);
+  }
   return retValue;
 }
 
@@ -23,5 +28,5 @@ int IsValueInRange(float value, float MinThreshold, float MaxThreshold)
 
 int main() {
   assert(batteryIsOk(25, 70, 0.7));
-  // assert(!batteryIsOk(50, 85, 0));
+  assert(!batteryIsOk(50, 85, 0));
 }
