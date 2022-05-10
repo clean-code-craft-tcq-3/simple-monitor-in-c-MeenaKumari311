@@ -8,7 +8,7 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
   printf("Checking soc!\n");
   retValue=IsValueInRange(soc,20,80);
   printf("Checking chargeRate!\n");
-  retValue=IsValueInRange(chargeRate,0,0.8);
+  retValue=IsValueInRange(chargeRate,-1000,0.8);
   return retValue;
 }
 
