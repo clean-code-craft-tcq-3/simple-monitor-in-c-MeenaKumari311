@@ -23,15 +23,15 @@ int IsValueInRange(float value, float MinThreshold, float MaxThreshold)
     printf("Value is below threshold!\n");
     return 0;
   }
-  elseif(value > MaxThreshold) {
+  else if(value > MaxThreshold) {
     printf("Value is above threshold!\n");
     return 0;
   }
-    else
-    {
-       printf("Value is OK, within range!\n");
-      return 1;
-    }
+  else
+  {
+    printf("Value is OK, within range!\n");
+    return 1;
+  }
  
   
 }
