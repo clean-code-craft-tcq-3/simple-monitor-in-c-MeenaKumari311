@@ -19,8 +19,12 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
 
 int IsValueInRange(float value, float MinThreshold, float MaxThreshold)
 {
-  if(value < MinThreshold || value > MaxThreshold) {
-    printf("Value out of range!\n");
+  if(value < MinThreshold) {
+    printf("Value is below threshold!\n");
+    return 0;
+  }
+  elseif(value > MaxThreshold) {
+    printf("Value is above threshold!\n");
     return 0;
   }
     else
