@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
-
+int IsValueInRange(float value, float MinThreshold, float MaxThreshold);
 int batteryIsOk(float temperature, float soc, float chargeRate) {
   int retValue;
   printf("Checking temperature!\n");
@@ -14,7 +14,7 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
 
 int IsValueInRange(float value, float MinThreshold, float MaxThreshold)
 {
-  if(value < MinThreshold || value > Maxthreshold) {
+  if(value < MinThreshold || value > MaxThreshold) {
     printf("Value out of range!\n");
     return 0;
  }
